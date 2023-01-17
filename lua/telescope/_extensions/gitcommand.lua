@@ -54,10 +54,8 @@ local gitcommand = function(opts, table)
 end
 
 local function setup(opt)
-  -- vim.api.nvim_exec(vim.inspect(opt), true)
   require('gitcommand').Opt.ignore = opt.ignore or {}
   Opt.ignore = require('gitcommand').Opt.ignore
-  -- Opt = { ignore = { 'commit', 'status' } }
 end
 
 local function run()
