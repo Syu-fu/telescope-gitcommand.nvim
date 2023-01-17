@@ -41,7 +41,11 @@ local gitcommand = function(opts, table)
         actions.select_default:replace(function()
           actions.close(prompt_bufnr)
           local selection = action_state.get_selected_entry()
-          vim.api.nvim_exec(selection.value[2], true)
+          local output = vim.api.nvim_exec(selection.value[2], true)
+          -- Use \n to prevent command line window from closing automatically
+          if output ~= '' then
+            vim.api.nvim_echo({ { output }, { '\n' } }, false, {})
+          end
         end)
         return true
       end,
