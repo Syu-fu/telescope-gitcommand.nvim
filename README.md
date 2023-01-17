@@ -17,6 +17,26 @@ require('telescope').extensions.gitcommand.gitcommand()
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
+## Command list
+
+### open telescope.nvim
+
+- status
+- branch
+- repo log(repository Git log)
+- file log(currentfile Git log)
+- stash(stash list)
+
+### use vim-fugitive
+
+- commit
+- commit --amend
+- commit --amend --no-edit
+- push
+- push --force
+- fetch
+- pull
+
 ## Configuration
 
 You can set commands not to be displayed
